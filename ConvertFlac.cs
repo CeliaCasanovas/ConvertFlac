@@ -97,7 +97,8 @@ Console.CancelKeyPress += (sender, e) =>
 // should there be any limits just to stay safe? can't think of a bad scenario but who knows
 var channel = Channel.CreateUnbounded<EncodeEvent>();
 
-// encoding runs in a thread pool, dashboard runs in the main thread
+// encoding runs in a "thread pool" (ie Parallel.ForEachAsync),
+// whilst the dashboard runs in the "main thread" (just an async method)
 var encodeTask = RunEncoderPipelineAsync(
     flacFiles,
     maxConcurrent,
