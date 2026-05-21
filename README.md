@@ -14,13 +14,13 @@ UI states are calculated in a "pure", functional way, then rendered
 
 I did my best to keep side effects isolated at the beginning and end of any path
 
-TODO: extract all strings so that I can easily write a Japanese and a Catalan version
-TODO: extract all text colours so that they can easily be changed or themed (?)
-      so far,
-      business as usual is    ConsoleColor.Cyan,
-      errors are              ConsoleColor.Red,
-      relevant messages are   ConsoleColor.Yellow,
-      success is              ConsoleColor.Green,
-      and prompts use the default colour
-  TODO: offer encoding options maybe? dunno
-  TODO: better validation!!!!!!!!!!
+TODO: extract all strings so that I can easily write a Japanese and a Catalan version  
+TODO: extract all text colours so that they can easily be changed or themed (?)  
+      so far,  
+      business as usual is    ConsoleColor.Cyan,  
+      errors are              ConsoleColor.Red,  
+      relevant messages are   ConsoleColor.Yellow,  
+      success is              ConsoleColor.Green,  
+      and prompts use the default colour  
+  TODO: offer encoding options maybe? dunno  
+  TODO: better validation!!!!!!!!!!  
