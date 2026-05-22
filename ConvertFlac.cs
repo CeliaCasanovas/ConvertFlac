@@ -409,7 +409,7 @@ RenderedFrame BuildFrame(DashboardState state, int totalFiles, int tick, bool is
     return new RenderedFrame(lines);
 }
 
-public static class ConsoleUtils
+static class ConsoleUtils
 {
     // extension methods!!
     // actually an extension method that's a super terse lambda!!
