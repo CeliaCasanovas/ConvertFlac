@@ -35,7 +35,6 @@ using System.Collections.Immutable;
 using System.Diagnostics;
 using System.Threading.Channels;
 
-// setup: initial checks etc
 Console.OutputEncoding = System.Text.Encoding.UTF8;
 
 if (!IsToolAvailable("ffmpeg"))
@@ -254,7 +253,7 @@ void DrawFinalSummary(ImmutableList<ConversionResult> results)
     var skipped = results.Where(r => r.State == Status.Skipped).ToList();
     var failures = results.Where(r => r.State is Status.Failed or Status.DeleteFailed).ToList();
 
-    // the dashboard spinner is cleared
+    // the dashboard job list is cleared off the screen
     // check the comments inside RunDashboardAsync for an explanation of
     // the weird string literal with ANSI commands
     Console.Write("\x1b[J\n");
