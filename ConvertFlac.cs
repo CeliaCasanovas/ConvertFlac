@@ -49,11 +49,11 @@ string folderPath = args.Length > 0 ? args[0] : "";
 // if args[1] is a valid integer, it's assigned to the maximum parallelism,
 // unless it's < 1, in which case it's set to 1
 // if it's not specified or isn't a valid integer, the maximum parallelism is
-// the system's core count divided by 1.5
+// the system's core count minus 2
 int maxConcurrent =
     args.Length > 1 && int.TryParse(args[1], out var mc)
         ? Math.Max(1, mc)
-        : Math.Max(1, (int)(Environment.ProcessorCount / 1.5));
+        : Math.Max(1, Environment.ProcessorCount - 2);
 
 if (string.IsNullOrWhiteSpace(folderPath))
 {
