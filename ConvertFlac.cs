@@ -193,8 +193,8 @@ async Task RunDashboardAsync(
     CancellationTokenSource cts
 )
 {
-    // rerender time: 150ms
-    using var timer = new PeriodicTimer(TimeSpan.FromMilliseconds(150));
+    // rerender time: 400ms
+    using var timer = new PeriodicTimer(TimeSpan.FromMilliseconds(400));
     var state = DashboardState.Empty;
     int tick = 0;
     int drawnLines = 0;
