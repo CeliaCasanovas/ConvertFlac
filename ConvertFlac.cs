@@ -36,6 +36,7 @@ using System.Diagnostics;
 using System.Threading.Channels;
 
 // setup: initial checks etc
+Console.OutputEncoding = System.Text.Encoding.UTF8;
 
 if (!IsToolAvailable("ffmpeg"))
 {
